@@ -1,6 +1,6 @@
 const { CategoryRouter } = require("./Routes/category.route.js");
 const express = require("express");
-
+const { Comprehension } = require("./Routes/comprehension.route.js");
 require("dotenv").config();
 const { connection } = require("./db.js");
 
@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/ques", CategoryRouter);
+app.use("/comprehension", Comprehension);
 app.listen(process.env.port, async () => {
   try {
     await connection;
