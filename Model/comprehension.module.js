@@ -13,6 +13,6 @@ const ComprehensionSchema = mongoose.Schema(
   }
 );
 
-const ComprehensionModel = mongoose.model("question", ComprehensionSchema);
+const ComprehensionModel = mongoose.model("comprehension", ComprehensionSchema);
 
 module.exports = { ComprehensionModel };
